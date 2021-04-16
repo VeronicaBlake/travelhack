@@ -5,7 +5,7 @@ import { dbContext } from '../db/DbContext'
 
 export class ImagesController extends BaseController {
   constructor() {
-    super('images')
+    super('posts')
     this.router
       .get('', this.getAll)
       .get('/:id', this.getOne)

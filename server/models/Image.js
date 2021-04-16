@@ -4,7 +4,6 @@ const ObjectId = Schema.Types.ObjectId
 
 const Image = new Schema(
   {
-    subs: [{ type: String, unique: true }],
     _id: { type: String, required: true },
     userId: { type: ObjectId, ref: 'Account', required: true },
     title: { type: String, required: true },
