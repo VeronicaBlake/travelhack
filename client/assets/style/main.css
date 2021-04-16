@@ -10734,4 +10734,16 @@ main {
   flex-grow: 1;
 }
 
+.image-card {
+  max-width: 800px;
+}
+
+.review-input {
+  min-width: 800px;
+}
+
+.review-card {
+  max-width: 700;
+}
+
 /*# sourceMappingURL=main.css.map */

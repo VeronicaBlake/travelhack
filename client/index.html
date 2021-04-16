@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href='../bootstrap.min (13).css'>
+
     <link rel="stylesheet" href="assets/style/main.css">
     <title>client</title>
 </head>
@@ -31,15 +31,19 @@
     <main class="container-fluid">
         <div class="row">
            <div class="col text-center py-5 bg-light">
-               <h1 class=display-1>Travel Shack</h1>
+               <h1 class=display-1>TravelHack</h1>
            </div> 
         </div>
         <!-- start search/create bar -->
         <div class="row">
             <div class="col">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-end py-4 bg-light">
-                    <button class="ml-5 btn btn-large bg-dark text-white">Create Post</button>
-                    <button class="ml-5 btn btn-large bg-dark text-white">Create Review</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Create Post
+                    </button>
+                    <button type="button" class="btn btn-dark text-white ml-3" data-toggle="modal" data-target="#hotelModal">
+                        Create Review
+                    </button>
                     <div class="dropdown ml-5">
                         <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -60,7 +64,7 @@
         <div class="container-fluid bg-light">
             <div class="row justify-content-between">
                 <!-- dynamically added content -->
-                <div class="col-md-8" id="content">
+                <div class="col-md-8" id="posts">
                     <h1>POSTS Content</h1>
                     <h1>POSTS Content</h1>
                     <h1>POSTS Content</h1>
@@ -83,26 +87,70 @@
             </div>
         </div>
 
+        <!-- MODALS -->
 
-
-        <!-- end search/create bar -->
-        <!-- <div class="row my-3">
-            <div class="col-5">
-                <div class="card p-2 skeleton-loader">
-                    <div class="card-title p-2">
-                        <div class="d-flex align-items-center">
-                            <div class="skeleton-loader avatar"></div>
-                            <div class="skeleton-loader text mx-2"></div>
-                        </div>
+        <!--review modal -->
+        <div class="modal fade" id="hotelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Review</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="card-body border-top">
-                        <div class="skeleton-loader text block"></div>
-                        <div class="skeleton-loader text block"></div>
-                        <div class="skeleton-loader text"></div>
+                    <div class="modal-body">
+                        <form onsubmit="app.reviewsController.addReview(event)">
+                            <div class="form-group">
+                                <label for="hotelName">Hotel Name</label>
+                                <input type="text" class="form-control" id="hotelName"
+                                    aria-describedby="emailHelp" placeholder="Enter title..">
+                            </div>
+                            <div class="form-group">
+                                <label for="text">Tell us about your stay...</label>
+                                <input type="text" class="form-control" id="reviewText"
+                                    placeholder="Enter reviewl...">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
                     </div>
+                    
                 </div>
             </div>
-        </div> -->
+        </div>
+
+
+        <!-- Image Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Post</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form onsubmit="app.imagesController.addImage(event)">
+                            <div class="form-group">
+                                <label for="postTitle">Post Title</label>
+                                <input type="text" class="form-control" id="postTitle"
+                                    aria-describedby="emailHelp" placeholder="Enter title..">
+                            </div>
+                            <div class="form-group">
+                                <label for="imgUrl">IMG URL</label>
+                                <input type="text" class="form-control" id="imgUrl"
+                                    placeholder="Enter img url...">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
 
         </main>
     <footer class="container-fluid bg-dark text-light">
