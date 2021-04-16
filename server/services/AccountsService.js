@@ -1,12 +1,5 @@
 import { dbContext } from '../db/DbContext'
 
-// Private Methods
-
-/**
- * Creates account if one does not exist
- * @param {any} account
- * @param {any} user
- */
 async function createAccountIfNeeded(account, user) {
   if (!account) {
     user._id = user.id
@@ -45,12 +38,12 @@ function sanitizeBody(body) {
   return writable
 }
 
-class AccountService {
-   /**
-    * Returns a list user profiles from a query search of name or email likeness
-    * limits to first 20 without offset 
-    * @param {string} str
-   */
+class AccountsService {
+  /**
+   * Returns a list user profiles from a query search of name or email likeness
+   * limits to first 20 without offset
+   * @param {string} str
+  */
   async findProfiles(str = '') {
     const filter = new RegExp(str, 'ig')
     const q = {
@@ -107,4 +100,4 @@ class AccountService {
     return account
   }
 }
-export const accountService = new AccountService()
+export const accountService = new AccountsService()
