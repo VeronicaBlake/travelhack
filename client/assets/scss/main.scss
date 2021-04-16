@@ -4,6 +4,10 @@
 @import "./custom.scss";
 @import "./loaders.scss";
 
+* {
+  border: 1px solid red;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -15,5 +19,16 @@ main {
   flex-grow: 1;
 }
 
+.image-card {
+  max-width: 800px
+}
+
+.review-input {
+  min-width: 800px;
+}
+
+.review-card {
+  max-width: 700;
+}
 
 

@@ -1,9 +1,11 @@
-import { AuthController } from "./Controllers/AuthController.js";
-import ValuesController from "./Controllers/ValuesController.js";
+import { AuthController } from './Controllers/AuthController.js'
+import ImagesController from './Controllers/ImagesController.js'
+import ReviewsController from './Controllers/ReviewsController.js'
 
 class App {
   authController = new AuthController();
-  valuesController = new ValuesController();
+  imagesController = new ImagesController();
+  reviewsController = new ReviewsController();
 }
 
-window["app"] = new App();
+window.app = new App()
