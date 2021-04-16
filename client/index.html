@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href='../bootstrap.min (13).css'>
     <link rel="stylesheet" href="assets/style/main.css">
     <title>client</title>
 </head>
@@ -28,7 +29,64 @@
         </nav>
     </header>
     <main class="container-fluid">
-        <div class="row my-3">
+        <div class="row">
+           <div class="col text-center py-5 bg-light">
+               <h1 class=display-1>Travel Shack</h1>
+           </div> 
+        </div>
+        <!-- start search/create bar -->
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-end py-4 bg-light">
+                    <button class="ml-5 btn btn-large bg-dark text-white">Create Post</button>
+                    <button class="ml-5 btn btn-large bg-dark text-white">Create Review</button>
+                    <div class="dropdown ml-5">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sort by...
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Most Recent...</a>
+                            <a class="dropdown-item" href="#">Most likes...</a>
+                            <a class="dropdown-item" href="#">Least likes...</a>
+                            <a class="dropdown-item" href="#">Images Only...</a>
+                            <a class="dropdown-item" href="#">Reviews Only...</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- main content -->
+        <div class="container-fluid bg-light">
+            <div class="row justify-content-between">
+                <!-- dynamically added content -->
+                <div class="col-md-8" id="content">
+                    <h1>POSTS Content</h1>
+                    <h1>POSTS Content</h1>
+                    <h1>POSTS Content</h1>
+                    <h1>POSTS Content</h1>
+                    <h1>POSTS Content</h1>
+                    <h1>POSTS Content</h1>
+                    <h1>POSTS Content</h1>
+                    <h1>POSTS Content</h1>
+                    <h1>POSTS Content</h1>
+                    <h1>POSTS Content</h1>
+                    <h1>POSTS Content</h1>
+                    <h1>POSTS Content</h1>
+                </div>
+
+                <!-- hardcoded ad space -->
+                <div class="d-sm-none d-md-block col-md-3">
+                    <h1>AD SPACE</h1>
+                    <h1>AD SPACE</h1>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- end search/create bar -->
+        <!-- <div class="row my-3">
             <div class="col-5">
                 <div class="card p-2 skeleton-loader">
                     <div class="card-title p-2">
@@ -44,8 +102,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </div> -->
+
+        </main>
     <footer class="container-fluid bg-dark text-light">
         <div class="row text-center">
             <div class="col">
@@ -54,6 +113,15 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.auth0.com/js/auth0-spa-js/1.11/auth0-spa-js.production.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/jakeoverall/auth0provider-client/browser/AuthProvider.browser.js"></script>

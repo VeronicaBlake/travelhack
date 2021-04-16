@@ -4,6 +4,10 @@
 @import "./custom.scss";
 @import "./loaders.scss";
 
+* {
+  border: 1px solid red;
+}
+
 body {
   display: flex;
   flex-direction: column;
