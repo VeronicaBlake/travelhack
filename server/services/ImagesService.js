@@ -3,7 +3,7 @@ import { BadRequest } from '../utils/Errors'
 
 class ImagesService {
   async create(body) {
-    return await dbContext.images.create(body)
+    return await dbContext.Images.create(body)
   }
 
   async delete(id) {

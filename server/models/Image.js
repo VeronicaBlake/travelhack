@@ -1,11 +1,9 @@
 import mongoose from 'mongoose'
 const Schema = mongoose.Schema
-const ObjectId = Schema.Types.ObjectId
 
 const Image = new Schema(
   {
-    _id: { type: String, required: true },
-    userId: { type: ObjectId, ref: 'Account', required: true },
+    userId: { type: String, ref: 'Account', required: true },
     title: { type: String, required: true },
     imgurl: { type: String },
     heartCount: { type: Number }
@@ -13,7 +11,7 @@ const Image = new Schema(
     // NOTE If you wish to add additional public properties for Accounts do so here\
 
   },
-  { timestamps: true, _id: false, toJSON: { virtuals: true } }
+  { timestamps: true, toJSON: { virtuals: true } }
 
 )
 

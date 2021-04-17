@@ -1,5 +1,6 @@
 import { ProxyState } from '../AppState.js'
 import { imagesService } from '../Services/ImagesService.js'
+import Image from '../Models/Image.js'
 
 // Private
 function _draw() {
@@ -30,6 +31,18 @@ export default class ImagesController {
   constructor() {
     ProxyState.on('posts', _draw)
     ProxyState.on('comments', _drawComments)
+
+    // this.getAll()
+  }
+
+  async getAll() {
+    try {
+      const res = await imagesService.getAll()
+      console.log(res.data)
+      ProxyState.posts = res.data.map(p => new Image(p))
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   async addImage(e) {
