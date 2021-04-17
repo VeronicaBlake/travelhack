@@ -12,10 +12,9 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
+        <nav class="navbar navbar-dark navbar-expand bg-dark text-light mb-0">
             <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">client</span>
+                <p class="logo">GOOD BOI</p>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,23 +28,21 @@
         </nav>
     </header>
     <main class="container-fluid">
-        <div class="row">
-           <div class="col text-center py-5 bg-light">
-               <h1 class=display-1>TravelHack</h1>
+        <div class="row hero">
+           <div class="col text-center py-5 bg-main">
+               <i class="fas fa-paw paw-icon"></i>
+               <h1 class="main-title text-white">Good Boi<small>ok code</small></h1>
            </div> 
         </div>
         <!-- start search/create bar -->
         <div class="row">
-            <div class="col">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-end py-4 bg-light">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                        Create Post
-                    </button>
-                    <button type="button" class="btn btn-dark text-white ml-3" data-toggle="modal" data-target="#hotelModal">
-                        Create Review
+            <div class="col bg-dark">
+                <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-end py-3 bg-dark px-0">
+                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
+                        Add Pup
                     </button>
                     <div class="dropdown ml-5">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sort by...
                         </button>
@@ -62,55 +59,37 @@
         </div>
         <!-- main content -->
         <div class="container-fluid bg-light">
-            <div class="row justify-content-between">
+            <div class="row justify-content-center pt-5">
                 <!-- dynamically added content -->
              <div class="col-md-8" id="posts">
 
-                <!-- start image -->
-                <div class="image-container mb-5">
-             <div class="image-card p-4 bg-primary d-flex flex-column">
-                <img src="https://cdn.shopify.com/s/files/1/0272/4770/6214/articles/when-do-puppies-start-walking.jpg?v=1593020034" class="post-image" alt="">
-                <div class="image-card-content py-3">
-                    
-                    <!-- user/title/likes -->
-                    <div class="image-card-header d-flex justify-content-between text-dark">
-                        <i class="fas fa-user fa-4x"></i>
-                        <h2 class="image-card-title" id="image-card-title">TITLE</h3>
-                        <div class="heart-info d-flex">
-                          <div class="heart-content>
-                            <div class="heart-count display-4" id="heart-count">13</div>
-                            <i class="far fa-heart fa-4x"></i>
-                          </div>
-                        </div>
-                    </div>
-
-                    <!-- add comment -->
-                    <div class="image-card-footer d-flex justify-content-between pt-4 pb-3">
-                    <form class="form-inline d-flex justify-content-center" onsubmit="app.imagesController.addComment()">
-                        <div class="form-group mb-2 w-80  comment-input shadow">
-                            <label for="commentText" class=""></label>
-                            <input type="text" class="bg-light mr-2 border-0 rounded p-2 comment-input" id="commentText"
-                                name="commentText" placeholder="Comment...">
-                        </div>
-                        <button type="submit" class="btn btn-dark mb-2 shadow ml-2"><i class="fas fa-plus fa-2x"></i></button>
-                    </form>
-
-
-                        <i class="fas fa-trash fa-1x" onclick="app.imagesController.deleteImage('${this.id}')"></i>
-                    </div>
-                </div>
-                <!-- dynamically generated comments -->
-                <div class="image-comments" id="${this.id}"></div>
+            
             </div>
+            <div class="d-sm-none d-md-block col-md-3 py-2">
+                    <h1>Enroll Today!</h1>
+                    <div class="ad-card-1 bg-main mb-2">
+                        <h3 class="ad-title text-center text-white bg-darkish py-2">
+                            DOGGY DAYCARE NEW STUDENTS
+                        </h3>
+                    </div>
+                    <div class="ad-card-3 bg-main mb-2">
+                        <h3 class="ad-title text-center text-white bg-darkish py-2">
+                            DINO DINO'S DOG TREATS
+                        </h3>
+                    </div>
+                    <div class="ad-card-2 bg-main">
+                        <h3 class="ad-title text-center text-white bg-darkish py-2">
+                            DOGGY DAYCARE NEW STUDENTS
+                        </h3>
+                    </div>
+                    
+                </div>
         </div>
         <!-- end column -->
                 
 
                 <!-- hardcoded ad space -->
-                <div class="d-sm-none d-md-block col-md-3">
-                    <h1>AD SPACE</h1>
-                    <h1>AD SPACE</h1>
-                </div>
+                
             </div>
             </div>
         <!-- MODALS -->
