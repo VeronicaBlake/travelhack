@@ -32,7 +32,7 @@ export default class ImagesController {
     ProxyState.on('posts', _draw)
     ProxyState.on('comments', _drawComments)
 
-    this.getAll()
+    // this.getAll()
   }
 
   async getAll() {

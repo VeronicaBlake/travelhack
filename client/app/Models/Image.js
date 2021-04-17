@@ -8,9 +8,9 @@ export default class Image {
   }
 
   get Template() {
-    return `
+    return /* html */ `
       <div class="image-container mb-5">
-            <div class="image-card p-4 bg-white">
+            <div class="image-card p-4 bg-white d-flex flex-column align-content-around">
                 <img src="${this.imgurl}" class="post-image" alt="">
                 <div class="image-card-content py-3">
                     

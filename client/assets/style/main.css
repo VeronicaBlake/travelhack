@@ -10734,10 +10734,6 @@ main {
   flex-grow: 1;
 }
 
-.image-card {
-  max-width: 800px;
-}
-
 .review-input {
   min-width: 800px;
 }
@@ -10747,9 +10743,16 @@ main {
 }
 
 .post-img {
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
   background-position: center;
+  margin: 0 auto;
+}
+
+.comment-input {
+  min-width: 70% !important;
+  padding-right: 300px;
+  background-color: white;
 }
 
 /*# sourceMappingURL=main.css.map */
