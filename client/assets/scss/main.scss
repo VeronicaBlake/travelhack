@@ -31,4 +31,8 @@ main {
   max-width: 700;
 }
 
-
+.post-img {
+  max-width: 100%;
+  object-fit: cover;
+  background-position: center;
+}

@@ -20,6 +20,12 @@ class ImagesService {
     const comment = new Comment(res.data)
     ProxyState.comments = [...ProxyState.comments, comment]
   }
+
+  async getAll() {
+    const res = await api.get('posts')
+    console.log(res)
+    ProxyState.posts = res.data.map(p => new Image(p))
+  }
 }
 
 export const imagesService = new ImagesService()

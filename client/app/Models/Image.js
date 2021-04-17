@@ -11,7 +11,7 @@ export default class Image {
     return `
       <div class="image-container mb-5">
             <div class="image-card p-4 bg-white">
-                <img src="${this.imgurl}" alt="">
+                <img src="${this.imgurl}" class="post-image" alt="">
                 <div class="image-card-content py-3">
                     
                     <!-- user/title/likes -->

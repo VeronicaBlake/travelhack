@@ -39,8 +39,8 @@ export class ImagesController extends BaseController {
 
   async create(req, res, next) {
     try {
+      req.body.userId = req.userInfo.id
       const image = await imagesService.create(req.body)
-      req.body.creatorId = req.userInfo.id
       res.send(image)
     } catch (error) {
       next(error)
